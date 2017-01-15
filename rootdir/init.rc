@@ -36,6 +36,10 @@ on init
     # Backward compatibility.
     #symlink /system/etc /etc
 
+    # Nubia Z11 hack. Requires bootdevice to be a specific symlink.
+    symlink /dev/block/platform/soc /dev/block/platform/soc/7464900.sdhci
+    symlink /dev/block/platform/soc/7464900.sdhci /dev/block/bootdevice
+
     loglevel 64
 
     symlink /sys/kernel/debug /d
