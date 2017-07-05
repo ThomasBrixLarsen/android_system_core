@@ -40,6 +40,8 @@ on init
     symlink /dev/block/platform/soc /dev/block/platform/soc/7464900.sdhci
     symlink /dev/block/platform/soc/7464900.sdhci /dev/block/bootdevice
 
+    exec /init.audio_fixup.sh
+
     loglevel 64
 
     symlink /sys/kernel/debug /d
